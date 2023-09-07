@@ -8,14 +8,22 @@
         <p class="tag2">one link at a time</p>
         <div class="new-user">
           <small>New user, </small>
-          <button mat-flat-button color="warn">Create a new account</button>
+          <button mat-flat-button color="warn" (click)="registerClick()">
+            Create a new account
+          </button>
         </div>
       </div>
     </div>
     <!-- right-grid -->
     <div id="landing-right">
-      <app-login></app-login>
-      <!-- <app-register></app-register> -->
+      <ng-container *ngIf="!registerActive; else elseBlock">
+        <app-login></app-login>
+      </ng-container>
+
+      <ng-template #elseBlock>
+        <app-register></app-register>
+      </ng-template>
+
       <!-- <div id="landing-right-content"></div> -->
     </div>
   </div>
