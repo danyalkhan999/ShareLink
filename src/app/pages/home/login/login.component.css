@@ -1,0 +1,45 @@
+#landing-right-content {
+  text-align: left;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#landing-right-content h1 {
+  font-size: 5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3em;
+}
+
+form input {
+  height: 36px;
+  width: 286px;
+  border: 1px dashed white;
+  border-radius: 9px;
+  padding: 0 7px;
+  font-size: 17px;
+  background: transparent;
+  color: white;
+}
+
+.btn {
+  background-color: #fff;
+  margin: 0;
+  font-size: 16px;
+}
+
+span a {
+  font-size: 14px;
+  color: red;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}

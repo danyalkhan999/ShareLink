@@ -8,8 +8,11 @@ import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp.js';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './pages/home/home.component';
 import { MatButtonModule } from '@angular/material/button';
+import { LoginComponent } from './pages/home/login/login.component';
+import { RegisterComponent } from './pages/home/register/register.component';
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

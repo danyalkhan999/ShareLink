@@ -1,0 +1,59 @@
+#landing-right-content {
+  text-align: left;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#landing-right-content h1 {
+  font-size: 5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3em;
+}
+
+form input {
+  height: 36px;
+  width: 70%;
+  border: 1px dashed white;
+  border-radius: 9px;
+  padding: 0 7px;
+  font-size: 17px;
+  background: transparent;
+  color: white;
+}
+
+.btn {
+  margin: 0;
+  font-size: 16px;
+}
+
+#name-input {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#name-input input {
+  width: 32%;
+}
+
+.login {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+.login a {
+  color: #abc4ff;
+  text-decoration: none;
+  font-weight: 600;
+}

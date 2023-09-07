@@ -1,6 +1,7 @@
 #home-page {
   width: 100%;
   height: 100%;
+  font-family: "Handjet", cursive;
 }
 #home-page-landing {
   width: 100%;
@@ -12,7 +13,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100%;
-  min-height: 800px;
+  /* min-height: 800px; */
 }
 
 #landing-left {
@@ -24,9 +25,8 @@
 
 #landing-left-content {
   text-align: right;
-  padding: 1em 1em 1em 3em;
+
   color: #fff;
-  font-family: "Handjet", cursive;
 }
 
 #landing-left-content h1 {
@@ -47,4 +47,67 @@
 #landing-left-content button {
   font-size: 1.2em;
   padding: 0.5em;
+}
+
+.new-user {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.new-user small {
+  letter-spacing: 0.5px;
+}
+
+#landing-right {
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+
+#landing-right-content {
+  text-align: left;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#landing-right-content h1 {
+  font-size: 5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3em;
+}
+
+form input {
+  height: 36px;
+  width: 286px;
+  border: 1px dashed white;
+  border-radius: 9px;
+  padding: 0 7px;
+  font-size: 17px;
+  background: transparent;
+  color: white;
+}
+
+.btn {
+  background-color: #fff;
+  margin: 0;
+  font-size: 16px;
+}
+
+span a {
+  font-size: 13px;
+  color: red;
+  letter-spacing: 0.5px;
+  margin: 0;
 }
