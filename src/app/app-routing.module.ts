@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/home/login/login.component';
 import { RegisterComponent } from './pages/home/register/register.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ],
   },
-  { path: '**', component: HomeComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
