@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { UsersService } from 'src/app/Services/users.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(private usersService: UsersService) {}
+  constructor(private usersService: UsersService, private router: Router) {}
 
   errorMessage = '';
 
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
       // this.usersService.login(email, password);
 
       if (this.usersService.login(email, password)) {
-        console.log('User is valid, Welcome to ShareLink');
+        this.router.navigate(['/sharelink']);
       } else {
         this.errorMessage = 'Invalid email or password';
       }

@@ -13,6 +13,7 @@ import { RegisterComponent } from './pages/home/register/register.component';
 import { HomeService } from './Services/home.service';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharelinkComponent } from './pages/sharelink/sharelink.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     NotFoundComponent,
+    SharelinkComponent,
   ],
   imports: [
     BrowserModule,

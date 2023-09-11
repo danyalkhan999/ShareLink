@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/home/login/login.component';
 import { RegisterComponent } from './pages/home/register/register.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { SharelinkComponent } from './pages/sharelink/sharelink.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ],
+  },
+  {
+    path: 'sharelink',
+    component: SharelinkComponent,
   },
   { path: '**', component: NotFoundComponent },
 ];

@@ -1,6 +1,7 @@
 <div id="landing-right-content">
   <h1>Login</h1>
   <form [formGroup]="loginForm" (submit)="onSubmit()">
+    <div class="text-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
     <input type="text" placeholder="email" formControlName="email" />
     <div
       *ngIf="
