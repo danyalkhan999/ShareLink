@@ -1,17 +1,50 @@
 <div id="landing-right-content">
   <h1>Register</h1>
-  <form>
-    <div id="name-input">
-      <input type="text" placeholder="first name" />
-      <input type="text" placeholder="last name" />
+  <form id="r-form" [formGroup]="registerForm" (submit)="onSubmit()">
+    <div id="name-input" formGroupName="name">
+      <input type="text" placeholder="first name" formControlName="firstname" />
+      <input type="text" placeholder="last name" formControlName="lastname" />
     </div>
-    <input type="text" placeholder="email" />
-    <input type="text" placeholder="password" />
-    <input type="text" placeholder="confirm password" />
+    <input type="text" placeholder="email" formControlName="email" />
+    <input type="text" placeholder="password" formControlName="password" />
+    <div
+      *ngIf="
+        registerForm.get('password').touched &&
+        registerForm.get('password').hasError('required')
+      "
+      class="text-danger"
+    >
+      Password is required.
+    </div>
+    <div
+      *ngIf="
+        registerForm.get('password').touched &&
+        registerForm.get('password').hasError('minlength')
+      "
+      class="text-danger"
+    >
+      Password must be at least 6 characters long.
+    </div>
+    <input
+      type="text"
+      placeholder="confirm password"
+      formControlName="confirmPassword"
+    />
+    <div
+      *ngIf="
+        registerForm.get('password').touched &&
+        registerForm.hasError('passwordMismatch')
+      "
+      class="text-danger"
+    >
+      Passwords do not match.
+    </div>
     <button mat-raised-button color="warn" type="submit" class="btn">
       Register
     </button>
   </form>
-  <span class="login">Already have an account? <a href="" routerLink="/login">Login</a></span>
+  <span class="login"
+    >Already have an account? <a href="" routerLink="/login">Login</a></span
+  >
   <!--(click)="loginClick()"-->
 </div>

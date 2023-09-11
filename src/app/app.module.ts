@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/home/login/login.component';
 import { RegisterComponent } from './pages/home/register/register.component';
 import { HomeService } from './Services/home.service';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    ReactiveFormsModule,
   ],
   providers: [HomeService],
   bootstrap: [AppComponent],

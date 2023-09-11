@@ -57,3 +57,11 @@ form input {
   text-decoration: none;
   font-weight: 600;
 }
+
+input.INVALID {
+  border-color: red;
+}
+
+.text-danger {
+  color: red;
+}
