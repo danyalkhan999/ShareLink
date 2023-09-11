@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { HomeService } from 'src/app/Services/home.service';
+import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,10 @@ import { HomeService } from 'src/app/Services/home.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  constructor(private homeService: HomeService) {}
+  constructor(
+    private homeService: HomeService,
+    private usersService: UsersService
+  ) {}
 
   registerForm: FormGroup;
 
@@ -57,9 +61,16 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     if (this.registerForm.valid) {
-      console.log(this.registerForm);
-    } else {
-      console.log('Form contains Invalid data');
+      const userData = this.registerForm.value;
+
+      const firstname = userData.name.firstname;
+      const lastname = userData.name.lastname;
+      const email = userData.email;
+      const password = userData.password;
+
+      this.usersService.addUser(firstname, lastname, email, password);
+
+      this.registerForm.reset();
     }
   }
 

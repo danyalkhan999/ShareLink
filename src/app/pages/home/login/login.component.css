@@ -43,3 +43,7 @@ span a {
   letter-spacing: 0.5px;
   margin-top: 10px;
 }
+
+.text-danger {
+  color: red;
+}
