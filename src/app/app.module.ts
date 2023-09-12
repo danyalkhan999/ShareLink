@@ -14,6 +14,9 @@ import { HomeService } from './Services/home.service';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharelinkComponent } from './pages/sharelink/sharelink.component';
+import { UsersService } from './Services/users.service';
+import { AuthService } from './Services/auth.service';
+// import { ShareLinkGuardService } from './Services/sharelink-guard.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,7 @@ import { SharelinkComponent } from './pages/sharelink/sharelink.component';
     MatButtonModule,
     ReactiveFormsModule,
   ],
-  providers: [HomeService],
+  providers: [HomeService, UsersService, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {
