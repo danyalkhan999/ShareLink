@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/home/login/login.component';
 import { RegisterComponent } from './pages/home/register/register.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SharelinkComponent } from './pages/sharelink/sharelink.component';
+import { authGuard } from './Guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
   {
     path: 'sharelink',
     component: SharelinkComponent,
+    canActivate: [authGuard],
   },
   { path: '**', component: NotFoundComponent },
 ];

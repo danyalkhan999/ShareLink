@@ -48,29 +48,4 @@ export class UsersService {
 
     localStorage.setItem('users', JSON.stringify(this.users));
   }
-
-  // checkEmail(email: string): boolean {
-  //   this.users.forEach((user) => {
-  //     if (user.email === email) return true;
-  //   });
-  //   return false;
-  // }
-
-  login(email: string, password: string): boolean {
-    let loginUser = null;
-
-    this.users.forEach((user) => {
-      if (user.email === email) {
-        loginUser = user;
-      }
-    });
-
-    if (loginUser) {
-      if (loginUser.password === password) {
-        return true;
-      }
-    }
-
-    return false;
-  }
 }

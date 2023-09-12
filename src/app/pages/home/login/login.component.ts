@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsersService } from 'src/app/Services/users.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { UsersService } from 'src/app/Services/users.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(private usersService: UsersService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   errorMessage = '';
 
@@ -27,12 +27,7 @@ export class LoginComponent implements OnInit {
       const password = this.loginForm.get('password').value;
 
       // this.usersService.login(email, password);
-
-      if (this.usersService.login(email, password)) {
-        this.router.navigate(['/sharelink']);
-      } else {
-        this.errorMessage = 'Invalid email or password';
-      }
+      this.authService.login(email, password);
     }
   }
 }
