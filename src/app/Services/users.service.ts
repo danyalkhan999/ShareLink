@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 
+interface Profile {
+  username: String;
+  description: String;
+}
 interface User {
   name: {
     firstname: string;
@@ -7,6 +11,7 @@ interface User {
   };
   email: string;
   password: string;
+  profile: Profile;
   // confirmPassword: string;
 }
 
@@ -41,6 +46,10 @@ export class UsersService {
       },
       email: email,
       password: password,
+      profile: {
+        username: '',
+        description: '',
+      },
     };
 
     this.users.push(newUser);

@@ -7,7 +7,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { HomeService } from 'src/app/Services/home.service';
+import { UserService } from 'src/app/Services/user.service';
 import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
@@ -18,7 +20,9 @@ import { UsersService } from 'src/app/Services/users.service';
 export class RegisterComponent implements OnInit {
   constructor(
     private homeService: HomeService,
-    private usersService: UsersService
+    private usersService: UsersService,
+    private router: Router,
+    private userService: UserService
   ) {}
 
   registerForm: FormGroup;
@@ -71,6 +75,8 @@ export class RegisterComponent implements OnInit {
       this.usersService.addUser(firstname, lastname, email, password);
 
       this.registerForm.reset();
+      this.userService.setUser({ email, password });
+      this.router.navigate(['sharelink/create-profile']);
     }
   }
 

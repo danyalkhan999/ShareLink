@@ -1,3 +1,13 @@
-<p>sharelink works!</p>
+<div id="navbar">
+  <div id="navbar-content">
+    <div id="navbar-left">
+      <div class="navbar-items">ShareLink</div>
+    </div>
+    <div id="navbar-right">
+      <div class="navbar-items" (click)="logout()">Logout</div>
+    </div>
+  </div>
+</div>
 
-<button (click)="logout()" type="button">Logout</button>
+<router-outlet></router-outlet>
+<!-- <button (click)="logout()" type="button">Logout</button> -->

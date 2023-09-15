@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
       // this.usersService.login(email, password);
       this.authService.login(email, password);
       this.router.navigate(['/sharelink']);
+      alert('Logged In');
     }
   }
 }

@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharelinkComponent } from './pages/sharelink/sharelink.component';
 import { UsersService } from './Services/users.service';
 import { AuthService } from './Services/auth.service';
+import { CreateProfileComponent } from './pages/sharelink/create-profile/create-profile.component';
 // import { ShareLinkGuardService } from './Services/sharelink-guard.service';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AuthService } from './Services/auth.service';
     RegisterComponent,
     NotFoundComponent,
     SharelinkComponent,
+    CreateProfileComponent,
   ],
   imports: [
     BrowserModule,

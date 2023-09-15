@@ -6,6 +6,7 @@ import { RegisterComponent } from './pages/home/register/register.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SharelinkComponent } from './pages/sharelink/sharelink.component';
 import { authGuard } from './Guard/auth.guard';
+import { CreateProfileComponent } from './pages/sharelink/create-profile/create-profile.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,9 @@ const routes: Routes = [
     path: 'sharelink',
     component: SharelinkComponent,
     canActivate: [authGuard],
+    children: [{ path: 'create-profile', component: CreateProfileComponent }],
   },
+
   { path: '**', component: NotFoundComponent },
 ];
 
