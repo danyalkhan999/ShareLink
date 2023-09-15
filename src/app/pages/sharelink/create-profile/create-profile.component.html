@@ -1,9 +1,22 @@
 <div id="profile">
-  <div id="profile-content">
-    <input type="text" placeholder="username" />
-    <textarea id="" cols="30" rows="5" placeholder="description">
+  <div id="profile-content" [formGroup]="profileForm">
+    <input type="text" placeholder="username" formControlName="username" />
+    <textarea
+      id=""
+      cols="30"
+      rows="5"
+      placeholder="description"
+      formControlName="description"
+    >
 Write about yourself</textarea
     >
-    <button mat-flat-button color="warn">Continue</button>
+    <button
+      mat-flat-button
+      color="warn"
+      type="submit"
+      (click)="profileSubmit()"
+    >
+      Continue
+    </button>
   </div>
 </div>
